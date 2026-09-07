@@ -24,8 +24,12 @@ class OCRAgent(BaseAgent):
             if roi.size == 0:
                 continue
 
-            texts = self.ocr.read(roi)
-
-            track.detection.ocr_text = texts
+            details = self.ocr.read_detailed(roi)
+            if details:
+                track.detection.ocr_text = [d["text"] for d in details]
+                track.detection.ocr_confidence = max((d["confidence"] for d in details), default=0.0)
+            else:
+                track.detection.ocr_text = []
+                track.detection.ocr_confidence = 0.0
 
         return packet

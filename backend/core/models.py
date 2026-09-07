@@ -17,8 +17,10 @@ class Detection:
     confidence: float
     class_id: int
     class_name: str
-
     track_id: Optional[int] = None
+    behavior: dict = field(default_factory=dict)
+    evidence: list = field(default_factory=list)
+    quality: dict = field(default_factory=dict)
 
     # Image
     crop: Optional[Any] = None
@@ -29,6 +31,7 @@ class Detection:
 
     # OCR
     ocr_text: list[str] = field(default_factory=list)
+    ocr_confidence: float = 0.0
 
     # Face
     face_detected: bool = False
@@ -42,13 +45,47 @@ class Detection:
     attributes: dict = field(default_factory=dict)
 
     # Events
-    events: list[str] = field(default_factory=list)
+    events: list[Any] = field(default_factory=list)
 
+    # Risk & Suspicion
     risk_score: float = 0.0
-
+    risk_level: str = "Low"
+    alert: bool = False
     is_suspicious: bool = False
-
+    reasons: list[str] = field(default_factory=list)
     risk_reasons: list[str] = field(default_factory=list)
+    contributing_factors: list[dict] = field(default_factory=list)
+
+    # Contextual & Movement
+    zone: str = ""
+    is_loitering: bool = False
+    speed_kmh: float = 0.0
+
+    def to_dict(self) -> dict[str, Any]:
+        """Safe dictionary representation for API serialization."""
+        return {
+            "bbox": list(self.bbox) if self.bbox else [],
+            "confidence": round(float(self.confidence), 4),
+            "class_id": int(self.class_id),
+            "class_name": self.class_name,
+            "track_id": self.track_id,
+            "quality_score": round(float(self.quality_score), 2),
+            "is_blurry": self.is_blurry,
+            "ocr_text": self.ocr_text,
+            "ocr_confidence": round(float(self.ocr_confidence), 4),
+            "face_detected": self.face_detected,
+            "face_identity": self.face_identity,
+            "face_confidence": round(float(self.face_confidence), 4),
+            "attributes": self.attributes,
+            "events": self.events,
+            "risk_score": round(float(self.risk_score), 2),
+            "risk_level": self.risk_level,
+            "alert": self.alert,
+            "is_suspicious": self.is_suspicious,
+            "reasons": self.reasons,
+            "contributing_factors": self.contributing_factors,
+            "zone": self.zone,
+        }
 # ==========================================================
 # Track
 # ==========================================================

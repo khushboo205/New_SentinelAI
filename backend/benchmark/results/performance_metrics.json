@@ -1,0 +1,95 @@
+{
+  "system_info": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.12.7",
+    "torch_version": "2.13.0+cpu",
+    "cuda_available": false,
+    "cuda_device": "None (CPU Execution)",
+    "cpu_count_logical": 16,
+    "opencv_version": "5.0.0",
+    "timestamp_utc": "2026-09-05 05:57:27 UTC"
+  },
+  "enhancement_profile": "moderate",
+  "latency_methodology": {
+    "primary_latency_metric": "steady_state_inference_latency",
+    "yolo_warmup_performed": true,
+    "yolo_cold_start_latency_ms": 1921.08,
+    "summary_means": {
+      "enhancement_mean_ms": 228.06,
+      "enhancement_throughput_fps": 4.4,
+      "yolo_steady_state_mean_ms": 53.05,
+      "yolo_steady_state_fps": 18.8,
+      "ocr_latency_ms": 303.81,
+      "ocr_throughput_fps": 3.3,
+      "composite_pipeline_mean_ms": 281.11,
+      "composite_pipeline_fps": 3.6
+    }
+  },
+  "sample_benchmarks": [
+    {
+      "sample": "sample_cctv_lowlight.jpg",
+      "resolution": [
+        478,
+        850
+      ],
+      "enhancement_latency_ms": 259.35,
+      "yolo_latency_orig_ms": 68.69,
+      "yolo_latency_enh_ms": 44.81
+    },
+    {
+      "sample": "sample_cctv_blur.jpg",
+      "resolution": [
+        478,
+        850
+      ],
+      "enhancement_latency_ms": 149.86,
+      "yolo_latency_orig_ms": 46.78,
+      "yolo_latency_enh_ms": 44.38
+    },
+    {
+      "sample": "sample_cctv_fog.jpg",
+      "resolution": [
+        478,
+        850
+      ],
+      "enhancement_latency_ms": 154.82,
+      "yolo_latency_orig_ms": 45.69,
+      "yolo_latency_enh_ms": 46.13
+    },
+    {
+      "sample": "sample_cctv_raw.jpg",
+      "resolution": [
+        478,
+        850
+      ],
+      "enhancement_latency_ms": 177.68,
+      "yolo_latency_orig_ms": 42.57,
+      "yolo_latency_enh_ms": 45.36
+    },
+    {
+      "sample": "market.jpg",
+      "resolution": [
+        1280,
+        853
+      ],
+      "enhancement_latency_ms": 399.41,
+      "yolo_latency_orig_ms": 96.86,
+      "yolo_latency_enh_ms": 59.11
+    },
+    {
+      "sample": "img2.jpeg",
+      "resolution": [
+        577,
+        1280
+      ],
+      "enhancement_latency_ms": 227.23,
+      "yolo_latency_orig_ms": 59.91,
+      "yolo_latency_enh_ms": 36.33
+    }
+  ],
+  "ocr_latency_ms": 303.81
+}

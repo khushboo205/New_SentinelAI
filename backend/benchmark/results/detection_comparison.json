@@ -1,0 +1,383 @@
+{
+  "system_info": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.12.7",
+    "torch_version": "2.13.0+cpu",
+    "cuda_available": false,
+    "cuda_device": "None (CPU Execution)",
+    "cpu_count_logical": 16,
+    "opencv_version": "5.0.0",
+    "timestamp_utc": "2026-09-05 05:57:27 UTC"
+  },
+  "model_used": "yolo11n.pt",
+  "results": [
+    {
+      "sample": "sample_cctv_lowlight.jpg",
+      "downstream_yolo": {
+        "count_orig": 1,
+        "count_enh": 0,
+        "count_delta": -1,
+        "mean_confidence_orig": 0.4228,
+        "mean_confidence_enh": 0.0,
+        "mean_confidence_delta": -0.4228,
+        "latency_orig_ms": 68.69,
+        "latency_enh_ms": 44.81,
+        "fps_orig": 14.6,
+        "fps_enh": 22.3,
+        "matched_detections_count": 0,
+        "matched_pairs": [],
+        "newly_detected_count": 0,
+        "dropped_detections_count": 1,
+        "detections_orig": [
+          {
+            "class_id": 9,
+            "class_name": "traffic light",
+            "confidence": 0.4228,
+            "bbox": [
+              290.1,
+              173.0,
+              383.8,
+              242.2
+            ]
+          }
+        ],
+        "detections_enh": []
+      }
+    },
+    {
+      "sample": "sample_cctv_blur.jpg",
+      "downstream_yolo": {
+        "count_orig": 0,
+        "count_enh": 0,
+        "count_delta": 0,
+        "mean_confidence_orig": 0.0,
+        "mean_confidence_enh": 0.0,
+        "mean_confidence_delta": 0.0,
+        "latency_orig_ms": 46.78,
+        "latency_enh_ms": 44.38,
+        "fps_orig": 21.4,
+        "fps_enh": 22.5,
+        "matched_detections_count": 0,
+        "matched_pairs": [],
+        "newly_detected_count": 0,
+        "dropped_detections_count": 0,
+        "detections_orig": [],
+        "detections_enh": []
+      }
+    },
+    {
+      "sample": "sample_cctv_fog.jpg",
+      "downstream_yolo": {
+        "count_orig": 0,
+        "count_enh": 0,
+        "count_delta": 0,
+        "mean_confidence_orig": 0.0,
+        "mean_confidence_enh": 0.0,
+        "mean_confidence_delta": 0.0,
+        "latency_orig_ms": 45.69,
+        "latency_enh_ms": 46.13,
+        "fps_orig": 21.9,
+        "fps_enh": 21.7,
+        "matched_detections_count": 0,
+        "matched_pairs": [],
+        "newly_detected_count": 0,
+        "dropped_detections_count": 0,
+        "detections_orig": [],
+        "detections_enh": []
+      }
+    },
+    {
+      "sample": "sample_cctv_raw.jpg",
+      "downstream_yolo": {
+        "count_orig": 1,
+        "count_enh": 1,
+        "count_delta": 0,
+        "mean_confidence_orig": 0.4248,
+        "mean_confidence_enh": 0.3698,
+        "mean_confidence_delta": -0.055,
+        "latency_orig_ms": 42.57,
+        "latency_enh_ms": 45.36,
+        "fps_orig": 23.5,
+        "fps_enh": 22.0,
+        "matched_detections_count": 1,
+        "matched_pairs": [
+          {
+            "class_name": "traffic light",
+            "iou": 0.79,
+            "conf_orig": 0.4248,
+            "conf_enh": 0.3698,
+            "conf_gain": -0.055
+          }
+        ],
+        "newly_detected_count": 0,
+        "dropped_detections_count": 0,
+        "detections_orig": [
+          {
+            "class_id": 9,
+            "class_name": "traffic light",
+            "confidence": 0.4248,
+            "bbox": [
+              244.0,
+              288.0,
+              267.1,
+              317.1
+            ]
+          }
+        ],
+        "detections_enh": [
+          {
+            "class_id": 9,
+            "class_name": "traffic light",
+            "confidence": 0.3698,
+            "bbox": [
+              248.2,
+              288.2,
+              267.6,
+              316.9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sample": "market.jpg",
+      "downstream_yolo": {
+        "count_orig": 7,
+        "count_enh": 5,
+        "count_delta": -2,
+        "mean_confidence_orig": 0.5524,
+        "mean_confidence_enh": 0.6152,
+        "mean_confidence_delta": 0.0628,
+        "latency_orig_ms": 96.86,
+        "latency_enh_ms": 59.11,
+        "fps_orig": 10.3,
+        "fps_enh": 16.9,
+        "matched_detections_count": 5,
+        "matched_pairs": [
+          {
+            "class_name": "person",
+            "iou": 0.983,
+            "conf_orig": 0.8651,
+            "conf_enh": 0.8358,
+            "conf_gain": -0.0293
+          },
+          {
+            "class_name": "person",
+            "iou": 0.995,
+            "conf_orig": 0.762,
+            "conf_enh": 0.7526,
+            "conf_gain": -0.0094
+          },
+          {
+            "class_name": "person",
+            "iou": 0.98,
+            "conf_orig": 0.6212,
+            "conf_enh": 0.6041,
+            "conf_gain": -0.0171
+          },
+          {
+            "class_name": "person",
+            "iou": 0.941,
+            "conf_orig": 0.441,
+            "conf_enh": 0.3977,
+            "conf_gain": -0.0433
+          },
+          {
+            "class_name": "person",
+            "iou": 0.65,
+            "conf_orig": 0.3682,
+            "conf_enh": 0.4858,
+            "conf_gain": 0.1176
+          }
+        ],
+        "newly_detected_count": 0,
+        "dropped_detections_count": 2,
+        "detections_orig": [
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.8651,
+            "bbox": [
+              152.6,
+              38.3,
+              407.8,
+              596.5
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.762,
+            "bbox": [
+              1198.6,
+              97.3,
+              1279.7,
+              840.5
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.6212,
+            "bbox": [
+              918.1,
+              77.1,
+              1195.4,
+              839.2
+            ]
+          },
+          {
+            "class_id": 51,
+            "class_name": "carrot",
+            "confidence": 0.4847,
+            "bbox": [
+              599.5,
+              341.8,
+              739.5,
+              399.7
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.441,
+            "bbox": [
+              749.5,
+              75.1,
+              1194.7,
+              842.1
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.3682,
+            "bbox": [
+              1110.4,
+              139.9,
+              1173.2,
+              241.5
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.3248,
+            "bbox": [
+              1108.5,
+              139.3,
+              1172.6,
+              281.9
+            ]
+          }
+        ],
+        "detections_enh": [
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.8358,
+            "bbox": [
+              149.8,
+              38.8,
+              407.9,
+              593.6
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.7526,
+            "bbox": [
+              1198.9,
+              97.2,
+              1279.8,
+              840.8
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.6041,
+            "bbox": [
+              922.4,
+              77.9,
+              1196.0,
+              838.4
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.4858,
+            "bbox": [
+              1110.3,
+              140.5,
+              1175.5,
+              289.7
+            ]
+          },
+          {
+            "class_id": 0,
+            "class_name": "person",
+            "confidence": 0.3977,
+            "bbox": [
+              773.9,
+              75.7,
+              1195.7,
+              843.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sample": "img2.jpeg",
+      "downstream_yolo": {
+        "count_orig": 1,
+        "count_enh": 1,
+        "count_delta": 0,
+        "mean_confidence_orig": 0.5797,
+        "mean_confidence_enh": 0.3722,
+        "mean_confidence_delta": -0.2075,
+        "latency_orig_ms": 59.91,
+        "latency_enh_ms": 36.33,
+        "fps_orig": 16.7,
+        "fps_enh": 27.5,
+        "matched_detections_count": 0,
+        "matched_pairs": [],
+        "newly_detected_count": 1,
+        "dropped_detections_count": 1,
+        "detections_orig": [
+          {
+            "class_id": 77,
+            "class_name": "teddy bear",
+            "confidence": 0.5797,
+            "bbox": [
+              69.4,
+              315.3,
+              465.7,
+              675.5
+            ]
+          }
+        ],
+        "detections_enh": [
+          {
+            "class_id": 77,
+            "class_name": "teddy bear",
+            "confidence": 0.3722,
+            "bbox": [
+              0.5,
+              0.9,
+              344.4,
+              449.5
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

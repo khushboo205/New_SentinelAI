@@ -1,15 +1,16 @@
 from pydantic import BaseModel
-
-
-class StatusResponse(BaseModel):
-    pipeline: str
+from typing import List, Optional
 
 
 class TrackResponse(BaseModel):
     track_id: int
     class_name: str
-    confidence: float
-    quality: float
-    ocr: list[str]
-    face: bool
-    features: dict
+
+
+class InvestigationResponse(BaseModel):
+    track: dict | None
+    events: List[dict]
+    features: List[dict]
+    faces: List[dict]
+    ocr: List[dict]
+    risk: List[dict]

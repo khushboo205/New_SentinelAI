@@ -1,17 +1,12 @@
-"""
-SentinelAI Tracking Service
-
-Wraps the Ultralytics tracker.
-"""
-
-from ultralytics import YOLO
-
+from services.model_manager import ModelManager
 
 class TrackingService:
 
     def __init__(self, model_path: str):
 
-        self.model = YOLO(model_path)
+        manager = ModelManager()
+
+        self.model = manager.load_yolo(model_path)
 
     def track(self, frame):
 

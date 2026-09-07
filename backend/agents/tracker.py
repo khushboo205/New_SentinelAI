@@ -1,10 +1,7 @@
-from ultralytics import YOLO
-
 from core.agent import BaseAgent
 from core.packet import DetectionPacket, TrackingPacket
 from core.models import Detection, Track
 from services.tracker import TrackingService
-from database.repository import Repository
 
 
 class TrackingAgent(BaseAgent):
@@ -13,7 +10,6 @@ class TrackingAgent(BaseAgent):
         super().__init__("TrackerAgent")
 
         self.tracker = TrackingService(model_path)
-        self.repository = Repository()
 
     def process(self, packet: DetectionPacket):
 
@@ -36,13 +32,23 @@ class TrackingAgent(BaseAgent):
         confs = result.boxes.conf.cpu().numpy()
         classes = result.boxes.cls.cpu().numpy().astype(int)
 
+        names = self.tracker.model.names
+
+        if not results:
+            return TrackingPacket(
+                frame_packet=packet.frame_packet,
+                tracks=[]
+            )
+
+        result = results[0]
+
         for track_id, box, conf, cls in zip(ids, boxes, confs, classes):
 
             detection = Detection(
                 bbox=tuple(box),
                 confidence=float(conf),
                 class_id=int(cls),
-                class_name=self.tracker.model.names[int(cls)],
+                class_name=names[int(cls)],
                 track_id=int(track_id)
             )
 
@@ -50,8 +56,6 @@ class TrackingAgent(BaseAgent):
                 track_id=int(track_id),
                 detection=detection
             )
-
-            self.repository.save_track(track)
 
             tracks.append(track)   
 

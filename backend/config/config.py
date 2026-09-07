@@ -24,7 +24,7 @@ OUTPUT_DIR = DATA_DIR / "output"
 
 WEIGHTS_DIR = ROOT_DIR / "weights"
 
-YOLO_MODEL = WEIGHTS_DIR / "yolo11n.pt"
+YOLO_MODEL = ROOT_DIR / "models" / "detectors" / "yolo11n.pt"
 
 # Future models
 

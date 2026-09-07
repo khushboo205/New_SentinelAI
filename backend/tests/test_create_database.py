@@ -1,6 +1,6 @@
-from database.schema import Schema
+if __name__ == "__main__":
+    from database.schema import Schema
 
-schema = Schema()
-schema.create_tables()
-
-print("Database created successfully.")
+    schema = Schema()
+    schema.create_tables()
+    print("Database created successfully.")

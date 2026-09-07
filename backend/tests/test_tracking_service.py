@@ -1,15 +1,22 @@
-from services.tracker import TrackingService
-import cv2
+def run():
+    from services.tracker import TrackingService
+    import cv2
+    from pathlib import Path
 
-tracker = TrackingService("yolov8n.pt")
+    video_path = "data/videos/sample2.mp4"
+    if not Path(video_path).exists():
+        print("Sample video not found.")
+        return
 
-cap = cv2.VideoCapture("video.mp4")
+    tracker = TrackingService("yolo11n.pt")
+    cap = cv2.VideoCapture(video_path)
+    success, frame = cap.read()
+    if success and frame is not None:
+        results = tracker.track(frame)
+        print(results[0].boxes)
+        print(results[0].boxes.id)
+    cap.release()
 
-success, frame = cap.read()
 
-results = tracker.track(frame)
-
-print(results[0].boxes)
-print(results[0].boxes.id)
-
-cap.release()
+if __name__ == "__main__":
+    run()

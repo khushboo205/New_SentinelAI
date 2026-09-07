@@ -1,0 +1,50 @@
+{
+  "system_info": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.12.7",
+    "torch_version": "2.13.0+cpu",
+    "cuda_available": false,
+    "cuda_device": "None (CPU Execution)",
+    "cpu_count_logical": 16,
+    "opencv_version": "5.0.0",
+    "timestamp_utc": "2026-09-05 05:57:27 UTC"
+  },
+  "controlled_ocr": {
+    "text_orig": "IN DL-01-CV-2026",
+    "text_enh": "OL01-Cvp026",
+    "words_detected_orig": 2,
+    "words_detected_enh": 1,
+    "mean_conf_orig": 0.6836,
+    "mean_conf_enh": 0.1267,
+    "conf_delta": -0.5569,
+    "latency_orig_ms": 426.87,
+    "latency_enh_ms": 303.81,
+    "raw_results_orig": [
+      {
+        "text": "IN",
+        "confidence": 0.8055
+      },
+      {
+        "text": "DL-01-CV-2026",
+        "confidence": 0.5617
+      }
+    ],
+    "raw_results_enh": [
+      {
+        "text": "OL01-Cvp026",
+        "confidence": 0.1267
+      }
+    ],
+    "ground_truth": "DL-01-CV-2026",
+    "exact_match_orig": false,
+    "exact_match_enh": false,
+    "edit_distance_orig": 2,
+    "edit_distance_enh": 2,
+    "char_accuracy_orig": 0.8,
+    "char_accuracy_enh": 0.8
+  }
+}

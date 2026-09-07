@@ -1,0 +1,265 @@
+{
+  "system_info": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.12.7",
+    "torch_version": "2.13.0+cpu",
+    "cuda_available": false,
+    "cuda_device": "None (CPU Execution)",
+    "cpu_count_logical": 16,
+    "opencv_version": "5.0.0",
+    "timestamp_utc": "2026-09-05 05:57:27 UTC"
+  },
+  "controlled_evaluation": {
+    "full_reference": {
+      "degraded_vs_clean": {
+        "mse": 22540.935,
+        "psnr_db": 4.6,
+        "ssim": 0.2334,
+        "lpips": null
+      },
+      "enhanced_vs_clean": {
+        "mse": 14839.363,
+        "psnr_db": 6.42,
+        "ssim": 0.1509,
+        "lpips": null
+      },
+      "psnr_gain_db": 1.82,
+      "ssim_gain": -0.0825,
+      "mse_reduction": 7701.57,
+      "mse_delta": -7701.57
+    },
+    "no_reference": {
+      "clean": {
+        "blur_laplacian": 5177.08,
+        "sharpness_tenengrad": 109.55,
+        "brightness_mean": 195.18,
+        "contrast_rms": 78.95,
+        "dynamic_range": 216.0,
+        "noise_std": 5.62,
+        "shannon_entropy": 1.3849
+      },
+      "degraded": {
+        "blur_laplacian": 1268.97,
+        "sharpness_tenengrad": 50.41,
+        "brightness_mean": 58.22,
+        "contrast_rms": 21.09,
+        "dynamic_range": 69.0,
+        "noise_std": 7.68,
+        "shannon_entropy": 6.024
+      },
+      "enhanced": {
+        "blur_laplacian": 193358.52,
+        "sharpness_tenengrad": 282.35,
+        "brightness_mean": 115.65,
+        "contrast_rms": 88.42,
+        "dynamic_range": 255.0,
+        "noise_std": 85.91,
+        "shannon_entropy": 7.395
+      }
+    }
+  },
+  "field_evaluation": [
+    {
+      "sample": "sample_cctv_lowlight.jpg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 2900.05,
+          "sharpness_tenengrad": 54.1,
+          "brightness_mean": 46.44,
+          "contrast_rms": 24.15,
+          "dynamic_range": 77.0,
+          "noise_std": 11.68,
+          "shannon_entropy": 6.564
+        },
+        "enhanced": {
+          "blur_laplacian": 297738.1,
+          "sharpness_tenengrad": 351.98,
+          "brightness_mean": 111.28,
+          "contrast_rms": 104.31,
+          "dynamic_range": 255.0,
+          "noise_std": 113.21,
+          "shannon_entropy": 5.4085
+        },
+        "delta": {
+          "blur_laplacian": 294838.05,
+          "sharpness_tenengrad": 297.88,
+          "brightness_mean": 64.84,
+          "contrast_rms": 80.16,
+          "dynamic_range": 178.0,
+          "noise_std": 101.53,
+          "shannon_entropy": -1.1555
+        }
+      },
+      "latency_ms": 259.35
+    },
+    {
+      "sample": "sample_cctv_blur.jpg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 72.3,
+          "sharpness_tenengrad": 18.01,
+          "brightness_mean": 133.93,
+          "contrast_rms": 60.72,
+          "dynamic_range": 188.0,
+          "noise_std": 2.12,
+          "shannon_entropy": 7.688
+        },
+        "enhanced": {
+          "blur_laplacian": 1642.88,
+          "sharpness_tenengrad": 46.92,
+          "brightness_mean": 160.89,
+          "contrast_rms": 59.38,
+          "dynamic_range": 181.0,
+          "noise_std": 10.87,
+          "shannon_entropy": 7.6796
+        },
+        "delta": {
+          "blur_laplacian": 1570.58,
+          "sharpness_tenengrad": 28.91,
+          "brightness_mean": 26.96,
+          "contrast_rms": -1.34,
+          "dynamic_range": -7.0,
+          "noise_std": 8.75,
+          "shannon_entropy": -0.0084
+        }
+      },
+      "latency_ms": 149.86
+    },
+    {
+      "sample": "sample_cctv_fog.jpg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 188.68,
+          "sharpness_tenengrad": 14.56,
+          "brightness_mean": 170.28,
+          "contrast_rms": 28.09,
+          "dynamic_range": 87.0,
+          "noise_std": 3.07,
+          "shannon_entropy": 6.5739
+        },
+        "enhanced": {
+          "blur_laplacian": 6210.63,
+          "sharpness_tenengrad": 45.14,
+          "brightness_mean": 190.7,
+          "contrast_rms": 35.06,
+          "dynamic_range": 105.0,
+          "noise_std": 16.95,
+          "shannon_entropy": 6.8697
+        },
+        "delta": {
+          "blur_laplacian": 6021.95,
+          "sharpness_tenengrad": 30.58,
+          "brightness_mean": 20.42,
+          "contrast_rms": 6.97,
+          "dynamic_range": 18.0,
+          "noise_std": 13.88,
+          "shannon_entropy": 0.2958
+        }
+      },
+      "latency_ms": 154.82
+    },
+    {
+      "sample": "sample_cctv_raw.jpg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 876.46,
+          "sharpness_tenengrad": 31.75,
+          "brightness_mean": 133.92,
+          "contrast_rms": 62.36,
+          "dynamic_range": 192.0,
+          "noise_std": 6.62,
+          "shannon_entropy": 7.6899
+        },
+        "enhanced": {
+          "blur_laplacian": 20019.29,
+          "sharpness_tenengrad": 96.58,
+          "brightness_mean": 162.98,
+          "contrast_rms": 64.19,
+          "dynamic_range": 226.05,
+          "noise_std": 31.67,
+          "shannon_entropy": 7.5589
+        },
+        "delta": {
+          "blur_laplacian": 19142.83,
+          "sharpness_tenengrad": 64.83,
+          "brightness_mean": 29.06,
+          "contrast_rms": 1.83,
+          "dynamic_range": 34.05,
+          "noise_std": 25.05,
+          "shannon_entropy": -0.131
+        }
+      },
+      "latency_ms": 177.68
+    },
+    {
+      "sample": "market.jpg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 1292.92,
+          "sharpness_tenengrad": 90.5,
+          "brightness_mean": 116.14,
+          "contrast_rms": 58.03,
+          "dynamic_range": 186.0,
+          "noise_std": 8.48,
+          "shannon_entropy": 7.8003
+        },
+        "enhanced": {
+          "blur_laplacian": 28307.3,
+          "sharpness_tenengrad": 218.21,
+          "brightness_mean": 132.5,
+          "contrast_rms": 80.33,
+          "dynamic_range": 255.0,
+          "noise_std": 38.29,
+          "shannon_entropy": 7.727
+        },
+        "delta": {
+          "blur_laplacian": 27014.38,
+          "sharpness_tenengrad": 127.71,
+          "brightness_mean": 16.36,
+          "contrast_rms": 22.3,
+          "dynamic_range": 69.0,
+          "noise_std": 29.81,
+          "shannon_entropy": -0.0733
+        }
+      },
+      "latency_ms": 399.41
+    },
+    {
+      "sample": "img2.jpeg",
+      "quality_metrics": {
+        "original": {
+          "blur_laplacian": 76.22,
+          "sharpness_tenengrad": 40.94,
+          "brightness_mean": 161.73,
+          "contrast_rms": 38.31,
+          "dynamic_range": 115.0,
+          "noise_std": 2.15,
+          "shannon_entropy": 7.1622
+        },
+        "enhanced": {
+          "blur_laplacian": 2395.13,
+          "sharpness_tenengrad": 90.42,
+          "brightness_mean": 169.03,
+          "contrast_rms": 50.53,
+          "dynamic_range": 165.0,
+          "noise_std": 9.47,
+          "shannon_entropy": 7.4969
+        },
+        "delta": {
+          "blur_laplacian": 2318.91,
+          "sharpness_tenengrad": 49.48,
+          "brightness_mean": 7.3,
+          "contrast_rms": 12.22,
+          "dynamic_range": 50.0,
+          "noise_std": 7.32,
+          "shannon_entropy": 0.3347
+        }
+      },
+      "latency_ms": 227.23
+    }
+  ]
+}

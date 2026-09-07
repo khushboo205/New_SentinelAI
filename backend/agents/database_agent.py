@@ -25,10 +25,15 @@ class DatabaseAgent(BaseAgent):
 
             self.repository.save_risk(track)
 
-            for event in track.detection.events:
+            for event in getattr(track.detection, "events", []):
+                event_name = (
+                    getattr(event, "event_type", None)
+                    or (event.get("event") if isinstance(event, dict) else None)
+                    or str(event)
+                )
                 self.repository.save_event(
                     track.track_id,
-                    event.event_type
+                    event_name
                 )
 
         return packet

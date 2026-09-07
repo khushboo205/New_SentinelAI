@@ -1,0 +1,741 @@
+{
+  "timestamp_utc": "2026-09-05 05:57:27 UTC",
+  "system_info": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python_version": "3.12.7",
+    "torch_version": "2.13.0+cpu",
+    "cuda_available": false,
+    "cuda_device": "None (CPU Execution)",
+    "cpu_count_logical": 16,
+    "opencv_version": "5.0.0",
+    "timestamp_utc": "2026-09-05 05:57:27 UTC"
+  },
+  "field_evaluation_summary": {
+    "experiment_name": "Real-World Degraded CCTV Field Evaluation",
+    "timestamp": "2026-09-05 05:57:31 UTC",
+    "samples_evaluated_count": 6,
+    "total_latency_ms": 2489.86,
+    "enhancement_profile": "moderate",
+    "yolo_model": "yolo11n.pt",
+    "yolo_warmup_performed": true,
+    "yolo_cold_start_latency_ms": 1921.08,
+    "samples": [
+      {
+        "sample_name": "sample_cctv_lowlight.jpg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\data\\test_samples\\sample_cctv_lowlight.jpg",
+        "source_resolution": [
+          478,
+          850
+        ],
+        "source_sha256": "d69acf4fe22b804d794074e932c7df51b9e7741287c21a31ad05c65640cc7fd3",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\sample_cctv_lowlight_enhanced_749d846efe.jpg",
+        "derivative_sha256": "749d846efe36d75a1d33262f092dba62f61b6d0e2060f19b7e126f6bd2c779f9",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 259.35,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 2900.05,
+            "sharpness_tenengrad": 54.1,
+            "brightness_mean": 46.44,
+            "contrast_rms": 24.15,
+            "dynamic_range": 77.0,
+            "noise_std": 11.68,
+            "shannon_entropy": 6.564
+          },
+          "enhanced": {
+            "blur_laplacian": 297738.1,
+            "sharpness_tenengrad": 351.98,
+            "brightness_mean": 111.28,
+            "contrast_rms": 104.31,
+            "dynamic_range": 255.0,
+            "noise_std": 113.21,
+            "shannon_entropy": 5.4085
+          },
+          "delta": {
+            "blur_laplacian": 294838.05,
+            "sharpness_tenengrad": 297.88,
+            "brightness_mean": 64.84,
+            "contrast_rms": 80.16,
+            "dynamic_range": 178.0,
+            "noise_std": 101.53,
+            "shannon_entropy": -1.1555
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 1,
+          "count_enh": 0,
+          "count_delta": -1,
+          "mean_confidence_orig": 0.4228,
+          "mean_confidence_enh": 0.0,
+          "mean_confidence_delta": -0.4228,
+          "latency_orig_ms": 68.69,
+          "latency_enh_ms": 44.81,
+          "fps_orig": 14.6,
+          "fps_enh": 22.3,
+          "matched_detections_count": 0,
+          "matched_pairs": [],
+          "newly_detected_count": 0,
+          "dropped_detections_count": 1,
+          "detections_orig": [
+            {
+              "class_id": 9,
+              "class_name": "traffic light",
+              "confidence": 0.4228,
+              "bbox": [
+                290.1,
+                173.0,
+                383.8,
+                242.2
+              ]
+            }
+          ],
+          "detections_enh": []
+        }
+      },
+      {
+        "sample_name": "sample_cctv_blur.jpg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\data\\test_samples\\sample_cctv_blur.jpg",
+        "source_resolution": [
+          478,
+          850
+        ],
+        "source_sha256": "cf894b36c818db77e9fbea7e5b3b775ee613599312c95c6d0e20ea1cae68d981",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\sample_cctv_blur_enhanced_7ec9b416cb.jpg",
+        "derivative_sha256": "7ec9b416cb29df6fcb96fd3c675d259a0c777382baa399fde82e36f90c830c3a",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 149.86,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 72.3,
+            "sharpness_tenengrad": 18.01,
+            "brightness_mean": 133.93,
+            "contrast_rms": 60.72,
+            "dynamic_range": 188.0,
+            "noise_std": 2.12,
+            "shannon_entropy": 7.688
+          },
+          "enhanced": {
+            "blur_laplacian": 1642.88,
+            "sharpness_tenengrad": 46.92,
+            "brightness_mean": 160.89,
+            "contrast_rms": 59.38,
+            "dynamic_range": 181.0,
+            "noise_std": 10.87,
+            "shannon_entropy": 7.6796
+          },
+          "delta": {
+            "blur_laplacian": 1570.58,
+            "sharpness_tenengrad": 28.91,
+            "brightness_mean": 26.96,
+            "contrast_rms": -1.34,
+            "dynamic_range": -7.0,
+            "noise_std": 8.75,
+            "shannon_entropy": -0.0084
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 0,
+          "count_enh": 0,
+          "count_delta": 0,
+          "mean_confidence_orig": 0.0,
+          "mean_confidence_enh": 0.0,
+          "mean_confidence_delta": 0.0,
+          "latency_orig_ms": 46.78,
+          "latency_enh_ms": 44.38,
+          "fps_orig": 21.4,
+          "fps_enh": 22.5,
+          "matched_detections_count": 0,
+          "matched_pairs": [],
+          "newly_detected_count": 0,
+          "dropped_detections_count": 0,
+          "detections_orig": [],
+          "detections_enh": []
+        }
+      },
+      {
+        "sample_name": "sample_cctv_fog.jpg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\data\\test_samples\\sample_cctv_fog.jpg",
+        "source_resolution": [
+          478,
+          850
+        ],
+        "source_sha256": "605736b371607dc035cda63be9eef5788693efa9aac55f0a84e0bdd22969a9a9",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\sample_cctv_fog_enhanced_732b1965ce.jpg",
+        "derivative_sha256": "732b1965ce68f370fe64bb6cb2a0ec87832d7dce0ae4add76995ea6189e38d66",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 154.82,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 188.68,
+            "sharpness_tenengrad": 14.56,
+            "brightness_mean": 170.28,
+            "contrast_rms": 28.09,
+            "dynamic_range": 87.0,
+            "noise_std": 3.07,
+            "shannon_entropy": 6.5739
+          },
+          "enhanced": {
+            "blur_laplacian": 6210.63,
+            "sharpness_tenengrad": 45.14,
+            "brightness_mean": 190.7,
+            "contrast_rms": 35.06,
+            "dynamic_range": 105.0,
+            "noise_std": 16.95,
+            "shannon_entropy": 6.8697
+          },
+          "delta": {
+            "blur_laplacian": 6021.95,
+            "sharpness_tenengrad": 30.58,
+            "brightness_mean": 20.42,
+            "contrast_rms": 6.97,
+            "dynamic_range": 18.0,
+            "noise_std": 13.88,
+            "shannon_entropy": 0.2958
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 0,
+          "count_enh": 0,
+          "count_delta": 0,
+          "mean_confidence_orig": 0.0,
+          "mean_confidence_enh": 0.0,
+          "mean_confidence_delta": 0.0,
+          "latency_orig_ms": 45.69,
+          "latency_enh_ms": 46.13,
+          "fps_orig": 21.9,
+          "fps_enh": 21.7,
+          "matched_detections_count": 0,
+          "matched_pairs": [],
+          "newly_detected_count": 0,
+          "dropped_detections_count": 0,
+          "detections_orig": [],
+          "detections_enh": []
+        }
+      },
+      {
+        "sample_name": "sample_cctv_raw.jpg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\data\\test_samples\\sample_cctv_raw.jpg",
+        "source_resolution": [
+          478,
+          850
+        ],
+        "source_sha256": "2473928ec52a5db10beb4ffdaafe8843e9578ce354dd5075cff43a65f40b5a80",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\sample_cctv_raw_enhanced_f8cbc9c22b.jpg",
+        "derivative_sha256": "f8cbc9c22b24d71d51acf14bb207df1e2d8a4de2d815bc5719bd67ff56cbb156",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 177.68,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 876.46,
+            "sharpness_tenengrad": 31.75,
+            "brightness_mean": 133.92,
+            "contrast_rms": 62.36,
+            "dynamic_range": 192.0,
+            "noise_std": 6.62,
+            "shannon_entropy": 7.6899
+          },
+          "enhanced": {
+            "blur_laplacian": 20019.29,
+            "sharpness_tenengrad": 96.58,
+            "brightness_mean": 162.98,
+            "contrast_rms": 64.19,
+            "dynamic_range": 226.05,
+            "noise_std": 31.67,
+            "shannon_entropy": 7.5589
+          },
+          "delta": {
+            "blur_laplacian": 19142.83,
+            "sharpness_tenengrad": 64.83,
+            "brightness_mean": 29.06,
+            "contrast_rms": 1.83,
+            "dynamic_range": 34.05,
+            "noise_std": 25.05,
+            "shannon_entropy": -0.131
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 1,
+          "count_enh": 1,
+          "count_delta": 0,
+          "mean_confidence_orig": 0.4248,
+          "mean_confidence_enh": 0.3698,
+          "mean_confidence_delta": -0.055,
+          "latency_orig_ms": 42.57,
+          "latency_enh_ms": 45.36,
+          "fps_orig": 23.5,
+          "fps_enh": 22.0,
+          "matched_detections_count": 1,
+          "matched_pairs": [
+            {
+              "class_name": "traffic light",
+              "iou": 0.79,
+              "conf_orig": 0.4248,
+              "conf_enh": 0.3698,
+              "conf_gain": -0.055
+            }
+          ],
+          "newly_detected_count": 0,
+          "dropped_detections_count": 0,
+          "detections_orig": [
+            {
+              "class_id": 9,
+              "class_name": "traffic light",
+              "confidence": 0.4248,
+              "bbox": [
+                244.0,
+                288.0,
+                267.1,
+                317.1
+              ]
+            }
+          ],
+          "detections_enh": [
+            {
+              "class_id": 9,
+              "class_name": "traffic light",
+              "confidence": 0.3698,
+              "bbox": [
+                248.2,
+                288.2,
+                267.6,
+                316.9
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "sample_name": "market.jpg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\data\\images\\market.jpg",
+        "source_resolution": [
+          1280,
+          853
+        ],
+        "source_sha256": "982bcd66ab882a3a9909f958009916dcca000c4dc7cec74167d2361c14498da9",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\market_enhanced_18b17de997.jpg",
+        "derivative_sha256": "18b17de997c54216636f7963afdc1b79d25d55c894f2076d8221f60fb792668a",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 399.41,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 1292.92,
+            "sharpness_tenengrad": 90.5,
+            "brightness_mean": 116.14,
+            "contrast_rms": 58.03,
+            "dynamic_range": 186.0,
+            "noise_std": 8.48,
+            "shannon_entropy": 7.8003
+          },
+          "enhanced": {
+            "blur_laplacian": 28307.3,
+            "sharpness_tenengrad": 218.21,
+            "brightness_mean": 132.5,
+            "contrast_rms": 80.33,
+            "dynamic_range": 255.0,
+            "noise_std": 38.29,
+            "shannon_entropy": 7.727
+          },
+          "delta": {
+            "blur_laplacian": 27014.38,
+            "sharpness_tenengrad": 127.71,
+            "brightness_mean": 16.36,
+            "contrast_rms": 22.3,
+            "dynamic_range": 69.0,
+            "noise_std": 29.81,
+            "shannon_entropy": -0.0733
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 7,
+          "count_enh": 5,
+          "count_delta": -2,
+          "mean_confidence_orig": 0.5524,
+          "mean_confidence_enh": 0.6152,
+          "mean_confidence_delta": 0.0628,
+          "latency_orig_ms": 96.86,
+          "latency_enh_ms": 59.11,
+          "fps_orig": 10.3,
+          "fps_enh": 16.9,
+          "matched_detections_count": 5,
+          "matched_pairs": [
+            {
+              "class_name": "person",
+              "iou": 0.983,
+              "conf_orig": 0.8651,
+              "conf_enh": 0.8358,
+              "conf_gain": -0.0293
+            },
+            {
+              "class_name": "person",
+              "iou": 0.995,
+              "conf_orig": 0.762,
+              "conf_enh": 0.7526,
+              "conf_gain": -0.0094
+            },
+            {
+              "class_name": "person",
+              "iou": 0.98,
+              "conf_orig": 0.6212,
+              "conf_enh": 0.6041,
+              "conf_gain": -0.0171
+            },
+            {
+              "class_name": "person",
+              "iou": 0.941,
+              "conf_orig": 0.441,
+              "conf_enh": 0.3977,
+              "conf_gain": -0.0433
+            },
+            {
+              "class_name": "person",
+              "iou": 0.65,
+              "conf_orig": 0.3682,
+              "conf_enh": 0.4858,
+              "conf_gain": 0.1176
+            }
+          ],
+          "newly_detected_count": 0,
+          "dropped_detections_count": 2,
+          "detections_orig": [
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.8651,
+              "bbox": [
+                152.6,
+                38.3,
+                407.8,
+                596.5
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.762,
+              "bbox": [
+                1198.6,
+                97.3,
+                1279.7,
+                840.5
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.6212,
+              "bbox": [
+                918.1,
+                77.1,
+                1195.4,
+                839.2
+              ]
+            },
+            {
+              "class_id": 51,
+              "class_name": "carrot",
+              "confidence": 0.4847,
+              "bbox": [
+                599.5,
+                341.8,
+                739.5,
+                399.7
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.441,
+              "bbox": [
+                749.5,
+                75.1,
+                1194.7,
+                842.1
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.3682,
+              "bbox": [
+                1110.4,
+                139.9,
+                1173.2,
+                241.5
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.3248,
+              "bbox": [
+                1108.5,
+                139.3,
+                1172.6,
+                281.9
+              ]
+            }
+          ],
+          "detections_enh": [
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.8358,
+              "bbox": [
+                149.8,
+                38.8,
+                407.9,
+                593.6
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.7526,
+              "bbox": [
+                1198.9,
+                97.2,
+                1279.8,
+                840.8
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.6041,
+              "bbox": [
+                922.4,
+                77.9,
+                1196.0,
+                838.4
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.4858,
+              "bbox": [
+                1110.3,
+                140.5,
+                1175.5,
+                289.7
+              ]
+            },
+            {
+              "class_id": 0,
+              "class_name": "person",
+              "confidence": 0.3977,
+              "bbox": [
+                773.9,
+                75.7,
+                1195.7,
+                843.0
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "sample_name": "img2.jpeg",
+        "source_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\img2.jpeg",
+        "source_resolution": [
+          577,
+          1280
+        ],
+        "source_sha256": "e70b617f2d971b3f94426b0a55e40d6c6750b7c906073e8030ffe708f17d3ee0",
+        "derivative_path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\img2_enhanced_f0dc77d49b.jpg",
+        "derivative_sha256": "f0dc77d49bae05394e6a06f82ff5f20ca4c44f343634c45356027f56b242716e",
+        "sha256_distinct": true,
+        "source_unmodified": true,
+        "enhancement_level": "moderate",
+        "enhancement_latency_ms": 227.23,
+        "quality_metrics": {
+          "original": {
+            "blur_laplacian": 76.22,
+            "sharpness_tenengrad": 40.94,
+            "brightness_mean": 161.73,
+            "contrast_rms": 38.31,
+            "dynamic_range": 115.0,
+            "noise_std": 2.15,
+            "shannon_entropy": 7.1622
+          },
+          "enhanced": {
+            "blur_laplacian": 2395.13,
+            "sharpness_tenengrad": 90.42,
+            "brightness_mean": 169.03,
+            "contrast_rms": 50.53,
+            "dynamic_range": 165.0,
+            "noise_std": 9.47,
+            "shannon_entropy": 7.4969
+          },
+          "delta": {
+            "blur_laplacian": 2318.91,
+            "sharpness_tenengrad": 49.48,
+            "brightness_mean": 7.3,
+            "contrast_rms": 12.22,
+            "dynamic_range": 50.0,
+            "noise_std": 7.32,
+            "shannon_entropy": 0.3347
+          }
+        },
+        "downstream_yolo": {
+          "count_orig": 1,
+          "count_enh": 1,
+          "count_delta": 0,
+          "mean_confidence_orig": 0.5797,
+          "mean_confidence_enh": 0.3722,
+          "mean_confidence_delta": -0.2075,
+          "latency_orig_ms": 59.91,
+          "latency_enh_ms": 36.33,
+          "fps_orig": 16.7,
+          "fps_enh": 27.5,
+          "matched_detections_count": 0,
+          "matched_pairs": [],
+          "newly_detected_count": 1,
+          "dropped_detections_count": 1,
+          "detections_orig": [
+            {
+              "class_id": 77,
+              "class_name": "teddy bear",
+              "confidence": 0.5797,
+              "bbox": [
+                69.4,
+                315.3,
+                465.7,
+                675.5
+              ]
+            }
+          ],
+          "detections_enh": [
+            {
+              "class_id": 77,
+              "class_name": "teddy bear",
+              "confidence": 0.3722,
+              "bbox": [
+                0.5,
+                0.9,
+                344.4,
+                449.5
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "controlled_evaluation_summary": {
+    "experiment_name": "Controlled Reference Ground-Truth Benchmark",
+    "timestamp": "2026-09-05 05:57:34 UTC",
+    "ground_truth_text": "DL-01-CV-2026",
+    "files": {
+      "clean_reference": {
+        "path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\controlled_clean_reference.png",
+        "sha256": "220b3ea51a29c427e3c7aff0226cf73b5bee5c49120ece59a7cfde981e0b0639"
+      },
+      "degraded_input": {
+        "path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\controlled_degraded_input.png",
+        "sha256": "30e4b88323d95b48aa94e5553895148cc67a8b7d914d8915b94f4dfcd61d798d"
+      },
+      "enhanced_output": {
+        "path": "C:\\Users\\benim\\OneDrive\\Desktop\\folder container\\mini_project\\backend\\benchmark\\derivatives\\controlled_enhanced_output.png",
+        "sha256": "4880e8896612fa293d5ed480d9ce88d6b2a0aa742fcf4c0ae41bd84d5d5ce4fc"
+      },
+      "hashes_distinct": true
+    },
+    "enhancement_latency_ms": 17.66,
+    "full_reference_metrics": {
+      "degraded_vs_clean": {
+        "mse": 22540.935,
+        "psnr_db": 4.6,
+        "ssim": 0.2334,
+        "lpips": null
+      },
+      "enhanced_vs_clean": {
+        "mse": 14839.363,
+        "psnr_db": 6.42,
+        "ssim": 0.1509,
+        "lpips": null
+      },
+      "psnr_gain_db": 1.82,
+      "ssim_gain": -0.0825,
+      "mse_reduction": 7701.57,
+      "mse_delta": -7701.57
+    },
+    "no_reference_metrics": {
+      "clean": {
+        "blur_laplacian": 5177.08,
+        "sharpness_tenengrad": 109.55,
+        "brightness_mean": 195.18,
+        "contrast_rms": 78.95,
+        "dynamic_range": 216.0,
+        "noise_std": 5.62,
+        "shannon_entropy": 1.3849
+      },
+      "degraded": {
+        "blur_laplacian": 1268.97,
+        "sharpness_tenengrad": 50.41,
+        "brightness_mean": 58.22,
+        "contrast_rms": 21.09,
+        "dynamic_range": 69.0,
+        "noise_std": 7.68,
+        "shannon_entropy": 6.024
+      },
+      "enhanced": {
+        "blur_laplacian": 193358.52,
+        "sharpness_tenengrad": 282.35,
+        "brightness_mean": 115.65,
+        "contrast_rms": 88.42,
+        "dynamic_range": 255.0,
+        "noise_std": 85.91,
+        "shannon_entropy": 7.395
+      }
+    },
+    "downstream_ocr": {
+      "text_orig": "IN DL-01-CV-2026",
+      "text_enh": "OL01-Cvp026",
+      "words_detected_orig": 2,
+      "words_detected_enh": 1,
+      "mean_conf_orig": 0.6836,
+      "mean_conf_enh": 0.1267,
+      "conf_delta": -0.5569,
+      "latency_orig_ms": 426.87,
+      "latency_enh_ms": 303.81,
+      "raw_results_orig": [
+        {
+          "text": "IN",
+          "confidence": 0.8055
+        },
+        {
+          "text": "DL-01-CV-2026",
+          "confidence": 0.5617
+        }
+      ],
+      "raw_results_enh": [
+        {
+          "text": "OL01-Cvp026",
+          "confidence": 0.1267
+        }
+      ],
+      "ground_truth": "DL-01-CV-2026",
+      "exact_match_orig": false,
+      "exact_match_enh": false,
+      "edit_distance_orig": 2,
+      "edit_distance_enh": 2,
+      "char_accuracy_orig": 0.8,
+      "char_accuracy_enh": 0.8
+    }
+  }
+}

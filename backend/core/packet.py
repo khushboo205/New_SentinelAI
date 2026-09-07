@@ -61,6 +61,14 @@ class FramePacket(BasePacket):
 
     video_name: str = ""
 
+    @property
+    def frame_number(self) -> int:
+        return self.frame_id
+
+    @frame_number.setter
+    def frame_number(self, value: int) -> None:
+        self.frame_id = value
+
 
 # ==========================================================
 # Detection Packet

@@ -1,19 +1,14 @@
-"""
-SentinelAI YOLO Detection Agent
-"""
-
-from ultralytics import YOLO
-
 from core.agent import BaseAgent
 from core.packet import FramePacket, DetectionPacket
 from core.models import Detection
+from services.model_manager import ModelManager
 
 
 class DetectorAgent(BaseAgent):
 
     def __init__(self, model_path: str):
         super().__init__("YOLODetector")
-        self.model = YOLO(model_path)
+        self.model = ModelManager().load_yolo(model_path)
 
     def process(self, packet: FramePacket):
 
